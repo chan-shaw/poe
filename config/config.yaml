@@ -1,0 +1,16 @@
+# Server configuration
+port: 35555
+
+# Proxy settings
+http_proxy: http://127.0.0.1:7897
+https_proxy: http://127.0.0.1:7897
+
+# Logging
+log_level: INFO
+log_file: logs/api.log
+
+# CORS configuration
+allowed_origins:
+  - "*"
+
+# 删除 poe_api_key_file 配置项
