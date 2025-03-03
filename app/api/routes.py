@@ -3,19 +3,165 @@ import time
 import hashlib
 import os
 import logging
-import aiofiles
-from quart import request, Response, stream_with_context, jsonify, make_response, send_from_directory
+from quart import request, Response, stream_with_context, jsonify, make_response, send_from_directory, render_template
 from fastapi_poe.types import ProtocolMessage
 
-from app.auth.auth import require_auth, get_api_key_from_request
+from app.auth.auth import get_api_key_from_request
 from app.api.chat import get_chat_response, yield_data, is_valid_json
 from app.config.settings import load_config
 from app.errors.handlers import ChatError
+from app.api.models import list_models, PoeError
+from app.monitoring.metrics import get_metrics, track_request, track_model_usage
 
 def register_routes(app):
     """Register API routes for the application."""
     
-    # 删除 before_request 中间件
+    @app.route('/', methods=['GET'])
+    async def index():
+        """渲染主页面，用于测试 Poe token 和模型列表健康度"""
+        return await render_template('index.html')
+    
+    @app.route('/api/test-token', methods=['POST'])
+    async def test_token():
+        """测试 Poe token 是否有效，并返回可用模型列表"""
+        try:
+            data = await request.get_json()
+            poe_api_key = data.get('token')
+            
+            if not poe_api_key:
+                return await make_response(jsonify({
+                    "success": False,
+                    "message": "请提供 Poe API Token"
+                }), 400)
+            
+            # 获取语言代码（如果有）
+            language_code = data.get('language', 'en')
+            
+            # 调用 list_models 函数获取模型列表
+            models_data = await list_models(poe_api_key, language_code)
+            
+            # 记录模型使用情况
+            for model in models_data.get("data", []):
+                track_model_usage(model.get("id"))
+            
+            return await make_response(jsonify({
+                "success": True,
+                "models": models_data.get("data", [])
+            }))
+            
+        except Exception as e:
+            logging.error(f"Token test error: {str(e)}")
+            return await make_response(jsonify({
+                "success": False,
+                "message": f"测试失败: {str(e)}"
+            }), 500)
+    
+    @app.route('/api/test-model', methods=['POST'])
+    async def test_model():
+        """测试单个模型的可用性"""
+        try:
+            data = await request.get_json()
+            poe_api_key = data.get('token')
+            model_id = data.get('model_id')
+            
+            if not poe_api_key or not model_id:
+                return await make_response(jsonify({
+                    "success": False,
+                    "message": "请提供 Poe API Token 和模型 ID"
+                }), 400)
+            
+            start_time = time.time()
+            
+            # 简单的测试消息
+            test_message = ProtocolMessage(role="user", content="Hello")
+            protocol_messages = [test_message]
+            
+            # 尝试获取响应
+            response_text = ""
+            async for response in get_chat_response(protocol_messages, model_id, poe_api_key):
+                if isinstance(response, ChatError):
+                    raise Exception(response.message)
+                response_text += response
+                if len(response_text) > 10:  # 只需要获取一小部分响应即可
+                    break
+            
+            duration = time.time() - start_time
+            
+            # 记录指标
+            track_request("POST", "test_model", 200, duration)
+            track_model_usage(model_id)
+            
+            return await make_response(jsonify({
+                "success": True,
+                "model_id": model_id,
+                "status": "healthy",
+                "response": response_text[:50] + "..." if len(response_text) > 50 else response_text,
+                "duration": round(duration, 2)
+            }))
+            
+        except Exception as e:
+            logging.error(f"Model test error: {str(e)}")
+            return await make_response(jsonify({
+                "success": False,
+                "model_id": model_id,
+                "status": "error",
+                "message": str(e)
+            }), 200)  # 返回200是为了前端能正常处理错误
+    
+    @app.route('/v1/models', methods=['GET'])
+    async def get_models():
+        """获取可用模型列表，格式与 OpenAI API 兼容"""
+        try:
+            # 从请求中获取 API key
+            poe_api_key = get_api_key_from_request()
+            if not poe_api_key:
+                return await make_response('Invalid or missing Poe API Key', 401)
+            
+            # 获取语言代码（如果有）
+            language_code = request.args.get('language', 'en')
+            
+            # 调用 list_models 函数获取模型列表
+            models_data = await list_models(poe_api_key, language_code)
+            
+            # 创建响应并添加 CORS 头
+            response = await make_response(jsonify(models_data))
+            response.headers['Access-Control-Allow-Origin'] = '*'
+            response.headers['Access-Control-Allow-Credentials'] = 'true'
+            
+            return response
+            
+        except PoeError as e:
+            logging.error(f"Error listing models: {str(e)}")
+            error_response = {
+                "error": {
+                    "message": str(e),
+                    "type": "api_error",
+                    "param": None,
+                    "code": "model_list_error"
+                }
+            }
+            
+            response = await make_response(jsonify(error_response), 400)
+            response.headers['Access-Control-Allow-Origin'] = '*'
+            response.headers['Access-Control-Allow-Credentials'] = 'true'
+            
+            return response
+        except Exception as e:
+            logging.error(f"Unexpected error in get_models: {str(e)}")
+            error_response = {
+                "error": {
+                    "message": "An unexpected error occurred",
+                    "type": "server_error",
+                    "param": None,
+                    "code": "server_error"
+                }
+            }
+            
+            response = await make_response(jsonify(error_response), 500)
+            response.headers['Access-Control-Allow-Origin'] = '*'
+            response.headers['Access-Control-Allow-Credentials'] = 'true'
+            
+            return response
     
     @app.route('/v1/chat/completions', methods=['OPTIONS', 'POST'])
     async def process_chat_completions():
@@ -98,6 +244,8 @@ def register_routes(app):
             
             out_status = False
             first_response = True
+            output_tokens = 0  # 添加 token 计数
+            input_tokens = sum(len(msg.content) // 4 for msg in protocol_messages)  # 估算输入 tokens
             
             async for response in get_chat_response(protocol_messages, model, poe_api_key):
                 if isinstance(response, ChatError) and out_status == False:
@@ -152,7 +300,14 @@ def register_routes(app):
                     else:
                         yield yield_data(id, current_time, model, response)
                         
-            yield yield_data(id, current_time, model, "", "finish")
+            # 在最后添加 usage 信息
+            finish_data = json.loads(yield_data(id, current_time, model, "", "finish").replace('data: ', '').strip())
+            finish_data["usage"] = {
+                "prompt_tokens": input_tokens,
+                "completion_tokens": output_tokens,
+                "total_tokens": input_tokens + output_tokens
+            }
+            yield f'data: {json.dumps(finish_data)}\n\n'
             yield yield_data(id, current_time, model, "", "end")
             
         # Set headers for streaming response
@@ -187,6 +342,8 @@ def register_routes(app):
         id = "chatcmpl-" + short_hash
 
         content_string = ''
+        output_tokens = 0  # 添加 token 计数
+        input_tokens = sum(len(msg.content) // 4 for msg in protocol_messages)  # 估算输入 tokens
 
         try:
             async for response in get_chat_response(protocol_messages, model, poe_api_key):
@@ -231,7 +388,12 @@ def register_routes(app):
                         "content": content_string
                     },
                     "finish_reason": "stop"
-                }]
+                }],
+                "usage": {
+                    "prompt_tokens": input_tokens,
+                    "completion_tokens": output_tokens,
+                    "total_tokens": input_tokens + output_tokens
+                }
             }
 
             # Create response with CORS headers
@@ -259,6 +421,27 @@ def register_routes(app):
             
             return response
 
+    @app.route('/health', methods=['GET'])
+    async def health_check():
+        """健康检查端点"""
+        return await make_response(jsonify({
+            "status": "ok",
+            "version": "1.0.0",
+            "timestamp": int(time.time())
+        }))
+    @app.route('/metrics', methods=['GET'])
+    async def metrics():
+        """Prometheus 指标端点"""
+        return Response(get_metrics(), mimetype='text/plain')
+    
+    # 在现有路由中添加指标跟踪
+    @app.after_request
+    async def after_request(response):
+        if hasattr(request, 'start_time'):
+            duration = time.time() - request.start_time
+            endpoint = request.endpoint or 'unknown'
+            track_request(request.method, endpoint, response.status_code, duration)
+        return response
     @app.route('/favicon.ico')
     async def favicon():
         """Serve favicon."""

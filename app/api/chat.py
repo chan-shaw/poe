@@ -2,6 +2,7 @@ import json
 import time
 import hashlib
 import logging
+import asyncio
 from fastapi_poe.types import ProtocolMessage
 from fastapi_poe.client import get_bot_response
 from app.errors.handlers import ChatError
@@ -43,25 +44,29 @@ def yield_data(id, current_time, model, messages, s_type=None):
     else:
         return f'data: {json.dumps({"id": id, "object": "chat.completion.chunk", "created": current_time, "model": model, "choices": [{"index": 0, "delta": {"content": messages}, "finish_reason": None}]})}\n\n'
 
-async def get_chat_response(messages, bot_name, api_key):
-    """Get streaming chat response from Poe API.
+async def get_chat_response(messages, bot_name, api_key, max_retries=3):
+    """Get streaming chat response from Poe API with retry mechanism."""
+    retry_count = 0
+    last_error = None
     
-    Args:
-        messages (list): List of chat messages
-        bot_name (str): Bot model name
-        api_key (str): Poe API key
-        
-    Yields:
-        str or ChatError: Message chunks or error object
-    """
-    try:
-        async for partial in get_bot_response(messages=messages, bot_name=bot_name, api_key=api_key):
-            raw_response = partial.raw_response
-            response_text = raw_response['text']
-            parsed_json = json.loads(response_text)
-            text = parsed_json["text"]
-            yield text
-    except Exception as e:
-        logging.error(f"Error getting chat response: {str(e)}")
-        yield ChatError(str(e))
-        return
+    while retry_count < max_retries:
+        try:
+            async for partial in get_bot_response(messages=messages, bot_name=bot_name, api_key=api_key):
+                raw_response = partial.raw_response
+                response_text = raw_response['text']
+                parsed_json = json.loads(response_text)
+                text = parsed_json["text"]
+                yield text
+            return  # 成功完成，退出函数
+        except Exception as e:
+            last_error = e
+            retry_count += 1
+            logging.warning(f"Error in chat response (attempt {retry_count}/{max_retries}): {str(e)}")
+            
+            if retry_count < max_retries:
+                # 指数退避策略
+                await asyncio.sleep(2 ** retry_count)
+            else:
+                logging.error(f"Failed after {max_retries} attempts: {str(e)}")
+                yield ChatError(str(e))
+                return

@@ -2,6 +2,7 @@ from quart import Quart
 from app.config.settings import load_config
 from app.api.routes import register_routes
 from app.errors.handlers import register_error_handlers
+from app.middleware.logging import log_request
 
 def create_app():
     """Create and configure the Quart application."""
@@ -20,5 +21,8 @@ def create_app():
     # Register routes and error handlers
     register_routes(app)
     register_error_handlers(app)
+    
+    # 注册中间件
+    log_request(app)
     
     return app

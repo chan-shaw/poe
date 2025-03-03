@@ -2,7 +2,7 @@
 quart>=0.18.0
 
 # Poe API client
-fastapi-poe>=0.0.20
+fastapi-poe>=0.0.56
 
 # Configuration management
 pyyaml>=6.0
@@ -24,3 +24,6 @@ bcrypt>=4.0.1
 
 # Monitoring
 prometheus-client>=0.17.0
+
+# requests
+requests>=2.31.0
