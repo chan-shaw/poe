@@ -1,0 +1,100 @@
+/* 响应式设计样式 */
+
+/* 小屏幕设备 (手机, 600px 以下) */
+@media only screen and (max-width: 600px) {
+    .stat-card-body {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stat-card-icon {
+        margin-right: 0;
+        margin-bottom: 0.75rem;
+    }
+    
+    .model-grid-view {
+        grid-template-columns: 1fr;
+    }
+    
+    .model-header {
+        flex-direction: column;
+    }
+    
+    .model-actions {
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+    .search-box, .model-filter {
+        margin-bottom: 1rem;
+    }
+    
+    .view-toggle {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+}
+
+/* 中等屏幕设备 (平板电脑, 768px 以下) */
+@media only screen and (max-width: 768px) {
+    .model-grid-view {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .navbar-brand span {
+        display: none;
+    }
+    
+    .navbar-brand i {
+        font-size: 1.5rem;
+    }
+}
+
+/* 大屏幕设备 (笔记本电脑, 992px 以下) */
+@media only screen and (max-width: 992px) {
+    .container {
+        max-width: 95%;
+    }
+    
+    .stat-card-value {
+        font-size: 1.5rem;
+    }
+}
+
+/* 超大屏幕设备 (桌面电脑, 1200px 以下) */
+@media only screen and (max-width: 1200px) {
+    .model-grid-view {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+/* 打印样式 */
+@media print {
+    .navbar, .btn, .model-actions, .pagination-container {
+        display: none !important;
+    }
+    
+    body {
+        background-color: white;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        break-inside: avoid;
+    }
+    
+    .model-card {
+        page-break-inside: avoid;
+        border: 1px solid #ddd;
+        box-shadow: none;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+}

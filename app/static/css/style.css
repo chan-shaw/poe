@@ -1,0 +1,68 @@
+/* 模型卡片样式 */
+.model-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 成功测试的模型卡片 */
+.model-card-success {
+    border-color: #28a745;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.2);
+    background-color: rgba(40, 167, 69, 0.05);
+}
+
+/* 测试失败的模型卡片 */
+.model-card-error {
+    border-color: #dc3545;
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.2);
+    background-color: rgba(220, 53, 69, 0.05);
+}
+
+/* 状态标签 */
+.status-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.status-badge.healthy {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-badge.error {
+    background-color: #dc3545;
+    color: white;
+}
+
+.status-badge.pending {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* 响应内容区域 */
+.model-response {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    display: none;
+}
+
+.model-response pre {
+    margin: 0;
+    white-space: pre-wrap;
+    font-size: 13px;
+}
+
+/* 隐藏模型状态指示器模块 */
+.model-status-indicators {
+    display: none !important;
+}

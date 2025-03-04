@@ -59,3 +59,320 @@
 2025-03-03 18:42:48 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
 2025-03-03 18:43:05 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
 2025-03-03 18:43:13 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-03 18:44:13 - INFO - Starting server on port 35555
+2025-03-03 18:44:13 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 10:42:28 - INFO - Starting server on port 35555
+2025-03-04 10:42:28 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 10:43:14 - INFO - Starting server on port 35555
+2025-03-04 10:43:14 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 10:43:29 - INFO - Starting server on port 35555
+2025-03-04 10:43:29 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 10:44:56 - INFO - Starting server on port 35555
+2025-03-04 10:44:56 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 10:45:23 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 10:45:32 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
+2025-03-04 10:45:34 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4o "HTTP/1.1 200 OK"
+2025-03-04 10:45:38 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 10:45:43 - INFO - HTTP Request: POST https://api.poe.com/bot/Gemini-2.0-Flash "HTTP/1.1 200 OK"
+2025-03-04 10:45:45 - INFO - HTTP Request: POST https://api.poe.com/bot/Deepseek-V3-FW "HTTP/1.1 200 OK"
+2025-03-04 10:45:51 - INFO - HTTP Request: POST https://api.poe.com/bot/Grok-2 "HTTP/1.1 200 OK"
+2025-03-04 11:38:22 - INFO - Starting server on port 35555
+2025-03-04 11:38:22 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 11:39:05 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 11:40:07 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 11:42:08 - INFO - Starting server on port 35555
+2025-03-04 11:42:08 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 11:42:32 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 11:43:38 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:43:39 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:43:39 - WARNING - Error in chat response (attempt 1/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 11:43:42 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:43:43 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:43:43 - WARNING - Error in chat response (attempt 2/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 11:43:48 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:43:49 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:43:49 - WARNING - Error in chat response (attempt 3/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 11:43:49 - ERROR - Failed after 3 attempts: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 11:43:49 - ERROR - Model test error: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 11:43:53 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 11:47:27 - INFO - Starting server on port 35555
+2025-03-04 11:47:27 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 11:48:24 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 11:48:28 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:48:29 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:48:29 - WARNING - Error in chat response (attempt 1/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 11:48:31 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:48:33 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:48:33 - WARNING - Error in chat response (attempt 2/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 11:48:37 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:48:38 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:48:38 - WARNING - Error in chat response (attempt 3/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 11:48:38 - ERROR - Failed after 3 attempts: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 11:48:38 - ERROR - Model test error: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 11:54:09 - INFO - Starting server on port 35555
+2025-03-04 11:54:09 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 11:54:50 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:54:51 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:54:51 - WARNING - Error in chat response (attempt 1/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 11:54:51 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 11:54:54 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:54:55 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:54:55 - WARNING - Error in chat response (attempt 2/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 11:54:59 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:55:00 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
+2025-03-04 11:55:01 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 11:55:01 - WARNING - Error in chat response (attempt 3/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 11:55:01 - ERROR - Failed after 3 attempts: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 11:55:01 - ERROR - Model test error: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 13:28:53 - INFO - Starting server on port 35555
+2025-03-04 13:28:53 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 13:29:22 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 13:29:28 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 13:29:29 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 13:29:29 - WARNING - Error in chat response (attempt 1/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 13:29:32 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 13:29:33 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 13:29:33 - WARNING - Error in chat response (attempt 2/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 13:29:38 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 13:29:39 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 13:29:39 - WARNING - Error in chat response (attempt 3/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 13:29:39 - ERROR - Failed after 3 attempts: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 13:29:39 - ERROR - Model test error: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 13:44:02 - INFO - Starting server on port 35555
+2025-03-04 13:44:02 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 13:44:55 - INFO - Starting server on port 35555
+2025-03-04 13:44:55 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 13:45:37 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 13:45:41 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 13:45:42 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 13:45:42 - WARNING - Error in chat response (attempt 1/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 13:45:45 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 13:45:46 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 13:45:46 - WARNING - Error in chat response (attempt 2/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 13:45:50 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 13:45:51 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 13:45:51 - WARNING - Error in chat response (attempt 3/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 13:45:51 - ERROR - Failed after 3 attempts: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 13:45:51 - ERROR - Model test error: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 13:45:52 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
+2025-03-04 14:00:57 - INFO - Starting server on port 35555
+2025-03-04 14:00:57 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 14:23:19 - INFO - Starting server on port 35555
+2025-03-04 14:23:19 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 14:23:45 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 14:23:56 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 14:23:57 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 14:23:57 - WARNING - Error in chat response (attempt 1/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 14:24:00 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 14:24:01 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 14:24:01 - WARNING - Error in chat response (attempt 2/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 14:24:05 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 14:24:07 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 14:24:07 - WARNING - Error in chat response (attempt 3/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 14:24:07 - ERROR - Failed after 3 attempts: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 14:24:07 - ERROR - Model test error: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 14:27:46 - INFO - HTTP Request: POST https://api.poe.com/bot/App-Creator "HTTP/1.1 200 OK"
+2025-03-04 14:27:47 - INFO - HTTP Request: POST https://api.poe.com/bot/App-Creator "HTTP/1.1 200 OK"
+2025-03-04 14:27:47 - WARNING - Error in chat response (attempt 1/3): {"allow_retry": true, "text": "Internal server error (error_id: 48c26532-62ee-48fe-8525-186e5a935e88)"}
+2025-03-04 14:27:50 - INFO - HTTP Request: POST https://api.poe.com/bot/App-Creator "HTTP/1.1 200 OK"
+2025-03-04 14:27:52 - INFO - HTTP Request: POST https://api.poe.com/bot/App-Creator "HTTP/1.1 200 OK"
+2025-03-04 14:27:52 - WARNING - Error in chat response (attempt 2/3): {"allow_retry": true, "text": "Internal server error (error_id: f70769f1-fc64-4235-86ae-4a20187d6cfb)"}
+2025-03-04 14:27:56 - INFO - HTTP Request: POST https://api.poe.com/bot/App-Creator "HTTP/1.1 200 OK"
+2025-03-04 14:27:58 - INFO - HTTP Request: POST https://api.poe.com/bot/App-Creator "HTTP/1.1 200 OK"
+2025-03-04 14:27:58 - WARNING - Error in chat response (attempt 3/3): {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:27:58 - ERROR - Failed after 3 attempts: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:27:58 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:27:59 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
+2025-03-04 14:28:03 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4o "HTTP/1.1 200 OK"
+2025-03-04 14:28:04 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4o "HTTP/1.1 200 OK"
+2025-03-04 14:28:04 - WARNING - Error in chat response (attempt 1/3): {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:28:07 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4o "HTTP/1.1 200 OK"
+2025-03-04 14:28:08 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4o "HTTP/1.1 200 OK"
+2025-03-04 14:28:08 - WARNING - Error in chat response (attempt 2/3): {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:28:13 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4o "HTTP/1.1 200 OK"
+2025-03-04 14:28:14 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 14:28:15 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 14:28:15 - WARNING - Error in chat response (attempt 1/3): {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:28:18 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 14:28:19 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 14:28:19 - WARNING - Error in chat response (attempt 2/3): {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:28:24 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 14:28:25 - INFO - HTTP Request: POST https://api.poe.com/bot/Deepseek-V3-FW "HTTP/1.1 200 OK"
+2025-03-04 14:28:26 - INFO - HTTP Request: POST https://api.poe.com/bot/Deepseek-V3-FW "HTTP/1.1 200 OK"
+2025-03-04 14:28:26 - WARNING - Error in chat response (attempt 1/3): {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:28:29 - INFO - HTTP Request: POST https://api.poe.com/bot/Deepseek-V3-FW "HTTP/1.1 200 OK"
+2025-03-04 14:28:30 - INFO - HTTP Request: POST https://api.poe.com/bot/Deepseek-V3-FW "HTTP/1.1 200 OK"
+2025-03-04 14:28:30 - WARNING - Error in chat response (attempt 2/3): {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:28:36 - INFO - HTTP Request: POST https://api.poe.com/bot/Deepseek-V3-FW "HTTP/1.1 200 OK"
+2025-03-04 14:28:40 - INFO - HTTP Request: POST https://api.poe.com/bot/Gemini-2.0-Flash "HTTP/1.1 200 OK"
+2025-03-04 14:28:41 - INFO - HTTP Request: POST https://api.poe.com/bot/Gemini-2.0-Flash "HTTP/1.1 200 OK"
+2025-03-04 14:28:41 - WARNING - Error in chat response (attempt 1/3): {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:28:44 - INFO - HTTP Request: POST https://api.poe.com/bot/Gemini-2.0-Flash "HTTP/1.1 200 OK"
+2025-03-04 14:28:45 - INFO - HTTP Request: POST https://api.poe.com/bot/Gemini-2.0-Flash "HTTP/1.1 200 OK"
+2025-03-04 14:28:45 - WARNING - Error in chat response (attempt 2/3): {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:28:50 - INFO - HTTP Request: POST https://api.poe.com/bot/Gemini-2.0-Flash "HTTP/1.1 200 OK"
+2025-03-04 14:46:51 - INFO - Starting server on port 35555
+2025-03-04 14:46:51 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 14:47:51 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 14:47:54 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 14:47:55 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 14:47:55 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 14:47:55 - ERROR - Model test error: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 14:48:02 - INFO - HTTP Request: POST https://api.poe.com/bot/App-Creator "HTTP/1.1 200 OK"
+2025-03-04 14:48:03 - INFO - HTTP Request: POST https://api.poe.com/bot/App-Creator "HTTP/1.1 200 OK"
+2025-03-04 14:48:03 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "Internal server error (error_id: 3e3bfc81-8dfa-4539-a57f-36ab05a24548)"}
+2025-03-04 14:48:03 - ERROR - Model test error: {"allow_retry": true, "text": "Internal server error (error_id: 3e3bfc81-8dfa-4539-a57f-36ab05a24548)"}
+2025-03-04 14:48:04 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
+2025-03-04 14:48:05 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
+2025-03-04 14:48:06 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "Internal server error (error_id: 4abef101-7ddd-432f-8385-e7f75dd8b897)"}
+2025-03-04 14:48:06 - ERROR - Model test error: {"allow_retry": true, "text": "Internal server error (error_id: 4abef101-7ddd-432f-8385-e7f75dd8b897)"}
+2025-03-04 14:48:06 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4o "HTTP/1.1 200 OK"
+2025-03-04 14:48:07 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4o "HTTP/1.1 200 OK"
+2025-03-04 14:48:07 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:48:07 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:48:08 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 14:48:09 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 14:48:09 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:48:09 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:48:10 - INFO - HTTP Request: POST https://api.poe.com/bot/Deepseek-V3-FW "HTTP/1.1 200 OK"
+2025-03-04 14:48:11 - INFO - HTTP Request: POST https://api.poe.com/bot/Deepseek-V3-FW "HTTP/1.1 200 OK"
+2025-03-04 14:48:11 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:48:11 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:48:12 - INFO - HTTP Request: POST https://api.poe.com/bot/Gemini-2.0-Flash "HTTP/1.1 200 OK"
+2025-03-04 14:48:13 - INFO - HTTP Request: POST https://api.poe.com/bot/Gemini-2.0-Flash "HTTP/1.1 200 OK"
+2025-03-04 14:48:13 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:48:13 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:48:35 - INFO - Starting server on port 35555
+2025-03-04 14:48:35 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 14:48:40 - INFO - Starting server on port 35555
+2025-03-04 14:48:40 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 14:49:34 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 14:49:35 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 14:49:35 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 14:49:35 - ERROR - Model test error: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 14:49:36 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 14:49:37 - INFO - HTTP Request: POST https://api.poe.com/bot/App-Creator "HTTP/1.1 200 OK"
+2025-03-04 14:49:38 - INFO - HTTP Request: POST https://api.poe.com/bot/App-Creator "HTTP/1.1 200 OK"
+2025-03-04 14:49:38 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "Internal server error (error_id: 7ea48bb8-38a4-4ed3-bf96-1b78bff77094)"}
+2025-03-04 14:49:38 - ERROR - Model test error: {"allow_retry": true, "text": "Internal server error (error_id: 7ea48bb8-38a4-4ed3-bf96-1b78bff77094)"}
+2025-03-04 14:49:39 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
+2025-03-04 14:49:40 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
+2025-03-04 14:49:40 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:49:40 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:49:41 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4o "HTTP/1.1 200 OK"
+2025-03-04 14:49:42 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4o "HTTP/1.1 200 OK"
+2025-03-04 14:49:42 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:49:42 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:49:44 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 14:49:45 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 14:49:45 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:49:45 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:49:45 - INFO - HTTP Request: POST https://api.poe.com/bot/Deepseek-V3-FW "HTTP/1.1 200 OK"
+2025-03-04 14:49:47 - INFO - HTTP Request: POST https://api.poe.com/bot/Deepseek-V3-FW "HTTP/1.1 200 OK"
+2025-03-04 14:49:47 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:49:47 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:49:47 - INFO - HTTP Request: POST https://api.poe.com/bot/Gemini-2.0-Flash "HTTP/1.1 200 OK"
+2025-03-04 14:49:48 - INFO - HTTP Request: POST https://api.poe.com/bot/Gemini-2.0-Flash "HTTP/1.1 200 OK"
+2025-03-04 14:49:49 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "Internal server error (error_id: 50f57339-f7c3-4754-a619-c1a51ed661a1)"}
+2025-03-04 14:49:49 - ERROR - Model test error: {"allow_retry": true, "text": "Internal server error (error_id: 50f57339-f7c3-4754-a619-c1a51ed661a1)"}
+2025-03-04 14:52:43 - INFO - Starting server on port 35555
+2025-03-04 14:52:43 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 14:53:22 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 14:53:23 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 14:53:23 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 14:53:23 - ERROR - Model test error: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 14:53:24 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 14:53:25 - INFO - HTTP Request: POST https://api.poe.com/bot/App-Creator "HTTP/1.1 200 OK"
+2025-03-04 14:53:26 - INFO - HTTP Request: POST https://api.poe.com/bot/App-Creator "HTTP/1.1 200 OK"
+2025-03-04 14:53:26 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "Internal server error (error_id: 2dd4b16b-a6b3-496a-9ce9-5219ac9c139f)"}
+2025-03-04 14:53:26 - ERROR - Model test error: {"allow_retry": true, "text": "Internal server error (error_id: 2dd4b16b-a6b3-496a-9ce9-5219ac9c139f)"}
+2025-03-04 14:53:27 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
+2025-03-04 14:53:28 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
+2025-03-04 14:53:28 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:53:28 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:53:29 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4o "HTTP/1.1 200 OK"
+2025-03-04 14:53:30 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4o "HTTP/1.1 200 OK"
+2025-03-04 14:53:30 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:53:30 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:53:32 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 14:53:34 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 14:53:34 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:53:34 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:53:34 - INFO - HTTP Request: POST https://api.poe.com/bot/Deepseek-V3-FW "HTTP/1.1 200 OK"
+2025-03-04 14:53:35 - INFO - HTTP Request: POST https://api.poe.com/bot/Deepseek-V3-FW "HTTP/1.1 200 OK"
+2025-03-04 14:53:36 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:53:36 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:53:36 - INFO - HTTP Request: POST https://api.poe.com/bot/Gemini-2.0-Flash "HTTP/1.1 200 OK"
+2025-03-04 14:53:38 - INFO - HTTP Request: POST https://api.poe.com/bot/Gemini-2.0-Flash "HTTP/1.1 200 OK"
+2025-03-04 14:53:38 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 14:53:38 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 15:10:44 - INFO - Starting server on port 35555
+2025-03-04 15:10:44 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 15:11:16 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 15:11:18 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 15:11:18 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "Internal server error (error_id: dccbc6bb-e7fa-45e2-91d8-268d0fd85b1a)"}
+2025-03-04 15:11:18 - ERROR - Model test error: {"allow_retry": true, "text": "Internal server error (error_id: dccbc6bb-e7fa-45e2-91d8-268d0fd85b1a)"}
+2025-03-04 15:11:22 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
+2025-03-04 15:11:24 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
+2025-03-04 15:19:40 - INFO - Starting server on port 35555
+2025-03-04 15:19:40 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 15:20:06 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 15:20:10 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4o "HTTP/1.1 200 OK"
+2025-03-04 15:20:11 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4o "HTTP/1.1 200 OK"
+2025-03-04 15:20:12 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "Internal server error (error_id: 94906cea-c294-4d29-a604-da427afd1f62)"}
+2025-03-04 15:20:12 - ERROR - Model test error: {"allow_retry": true, "text": "Internal server error (error_id: 94906cea-c294-4d29-a604-da427afd1f62)"}
+2025-03-04 15:20:16 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 15:20:17 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 15:20:17 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 15:20:17 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 15:20:22 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
+2025-03-04 15:20:38 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 15:20:40 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 15:20:40 - ERROR - Non-network error in chat response: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 15:20:40 - ERROR - Model test error: {"allow_retry": true, "text": "You have exceeded rate limit to query bot using User API Key. Try again later."}
+2025-03-04 15:25:14 - INFO - Starting server on port 35555
+2025-03-04 15:25:14 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 15:45:34 - INFO - Starting server on port 35555
+2025-03-04 15:45:34 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 15:51:18 - INFO - Starting server on port 35555
+2025-03-04 15:51:18 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 16:16:32 - INFO - Starting server on port 35555
+2025-03-04 16:16:32 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 16:18:42 - INFO - Starting server on port 35555
+2025-03-04 16:18:42 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 16:18:56 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 16:19:02 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 16:26:44 - INFO - Starting server on port 35555
+2025-03-04 16:26:44 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 16:26:57 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 16:26:59 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 16:26:59 - WARNING - Error in chat response (attempt 1/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 16:27:01 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 16:27:04 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 16:27:04 - WARNING - Error in chat response (attempt 2/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 16:27:08 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 16:27:09 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 16:27:09 - WARNING - Error in chat response (attempt 3/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 16:27:09 - ERROR - Failed after 3 attempts: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 16:27:09 - ERROR - Model test error: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 16:28:45 - INFO - Starting server on port 35555
+2025-03-04 16:28:45 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 16:33:21 - INFO - Starting server on port 35555
+2025-03-04 16:33:21 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 16:35:17 - INFO - Starting server on port 35555
+2025-03-04 16:35:17 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 16:36:29 - INFO - Starting server on port 35555
+2025-03-04 16:36:29 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 16:36:43 - INFO - HTTP Request: POST https://api.poe.com/bot/Web-Search "HTTP/1.1 200 OK"
+2025-03-04 16:36:53 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 16:36:54 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 16:36:54 - WARNING - Error in chat response (attempt 1/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 16:36:58 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 16:36:59 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 16:36:59 - WARNING - Error in chat response (attempt 2/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 16:37:03 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 16:37:04 - INFO - HTTP Request: POST https://api.poe.com/bot/Assistant "HTTP/1.1 200 OK"
+2025-03-04 16:37:04 - WARNING - Error in chat response (attempt 3/3): {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 16:37:04 - ERROR - Failed after 3 attempts: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 16:37:04 - ERROR - Model test error: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
+2025-03-04 16:37:09 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
