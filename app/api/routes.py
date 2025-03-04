@@ -183,14 +183,28 @@ def register_routes(app):
             
             # Check if streaming is requested
             flow_status = data.get("stream", False)
+            # Check if streaming is requested
+            flow_status = data.get("stream", False)
+            
+            # 检查模型是否需要 replace_response 处理
+            config = load_config()
+            should_replace_response = False
+            if "models" in config and model in config["models"]:
+                should_replace_response = config["models"][model].get("replace_response", False)
             
             # Convert messages to Poe protocol format
             protocol_messages = []
             for message in messages:
-                role = message["role"]
-                # Replace 'assistant' with 'bot' for Poe API
-                if role == "assistant":
+                original_role = message["role"]
+                # 根据不同角色进行转换
+                if original_role == "assistant":
                     role = "bot"
+                elif original_role == "developer":
+                    role = "user"
+                elif original_role == "system" and should_replace_response:
+                    role = "user"
+                else:
+                    role = original_role
                 content = message["content"]
                 protocol_messages.append(
                     ProtocolMessage(role=role, content=content))

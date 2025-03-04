@@ -376,3 +376,10 @@
 2025-03-04 16:37:04 - ERROR - Failed after 3 attempts: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
 2025-03-04 16:37:04 - ERROR - Model test error: {"allow_retry": true, "text": "Poe Assistant does not support query API"}
 2025-03-04 16:37:09 - INFO - HTTP Request: POST https://api.poe.com/bot/GPT-4.5-Preview "HTTP/1.1 200 OK"
+2025-03-04 16:40:42 - INFO - Starting server on port 35555
+2025-03-04 16:40:42 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 16:40:53 - INFO - HTTP Request: POST https://api.poe.com/bot/Claude-3.7-Sonnet "HTTP/1.1 200 OK"
+2025-03-04 16:53:05 - INFO - Starting server on port 35555
+2025-03-04 16:53:05 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
+2025-03-04 16:53:48 - INFO - Starting server on port 35555
+2025-03-04 16:53:48 - INFO - Running on http://0.0.0.0:35555 (CTRL + C to quit)
